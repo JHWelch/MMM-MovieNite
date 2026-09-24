@@ -8,7 +8,8 @@ It shows the movies for the upcoming movie night from [movies.wowellworld.com](h
 
 ## Installation
 
-In MagicMirror/modules
+In `MagicMirror/modules`
+
 ```sh
 git clone https://github.com/JHWelch/MMM-MovieNite.git
 ```
@@ -19,16 +20,12 @@ No dependencies are required for usage. See below for development dependencies.
 
 To use this module, add the following configuration block to the modules array in the `config/config.js` file:
 ```js
-var config = {
-    modules: [
-        {
-            module: 'MMM-MovieNite',
-            config: {
-                // See below for configurable options
-                // Can be empty
-            }
-        }
-    ]
+{
+  module: 'MMM-MovieNite',
+  config: {
+    // See below for configurable options
+    // Can be empty
+  }
 }
 ```
 
