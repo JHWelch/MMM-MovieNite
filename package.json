@@ -1,7 +1,7 @@
 {
-  "name": "mmm-movie-night",
+  "name": "MMM-MovieNite",
   "version": "1.0.0",
-  "description": "A Magic Mirror module for viewing the next movies.wowellworld.com movie.",
+  "description": "A Magic Mirror module for viewing the next movienite.club movie.",
   "main": "MMM-MovieNite.js",
   "scripts": {
     "test": "jest",
