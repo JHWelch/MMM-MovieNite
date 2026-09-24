@@ -35,6 +35,26 @@ To use this module, add the following configuration block to the modules array i
 | ---------------- | ---------- | ---------------------------------------------------------------------- |
 | `updateInterval` | *Optional* | Refresh time in milliseconds <br>Default 3600000 milliseconds (1 hour) |
 
+## Update
+
+### Automatic Update
+
+Did you know MagicMirror² has a built-in module updater? Read more about it [here](https://docs.magicmirror.builders/modules/updatenotification.html#updates-array).
+
+Add the following to your `updates` array of `updatenotification` in `config/config.js`
+
+```js
+{ 'MMM-MovieNite': 'git pull' },
+```
+
+### Manual Update
+
+In `~/MagicMirror/modules/MMM-MovieNite`
+
+```sh
+git pull
+```
+
 
 ## Development
 
