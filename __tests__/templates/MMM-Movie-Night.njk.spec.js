@@ -11,13 +11,13 @@ describe('content loaded', () => {
   };
 
   it('shows the theme', () => {
-    const template = nunjucks.render('MMM-Movie-Night.njk', payload);
+    const template = nunjucks.render('MMM-MovieNite.njk', payload);
 
     expect(template).toContain(event.theme);
   });
 
   it('shows the theme', () => {
-    const template = nunjucks.render('MMM-Movie-Night.njk', payload);
+    const template = nunjucks.render('MMM-MovieNite.njk', payload);
 
     payload.movies.forEach((movie) => {
       expect(template).toContain(movie.title);
@@ -28,7 +28,7 @@ describe('content loaded', () => {
 describe('loading', () => {
   it('shows loading', () => {
     const payload = { loading: true };
-    const template = nunjucks.render('MMM-Movie-Night.njk', payload);
+    const template = nunjucks.render('MMM-MovieNite.njk', payload);
 
     expect(template).toContain('LOADING');
   });

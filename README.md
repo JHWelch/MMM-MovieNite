@@ -1,4 +1,4 @@
-# MMM-Movie-Night
+# MMM-MovieNite
 
 This is a module for the [MagicMirror²](https://github.com/MichMich/MagicMirror/).
 
@@ -8,9 +8,10 @@ It shows the movies for the upcoming movie night from [movies.wowellworld.com](h
 
 ## Installation
 
-In MagicMirror/modules
+In `MagicMirror/modules`
+
 ```sh
-git clone https://github.com/JHWelch/MMM-Movie-Night.git
+git clone https://github.com/JHWelch/MMM-MovieNite.git
 ```
 
 No dependencies are required for usage. See below for development dependencies.
@@ -19,16 +20,12 @@ No dependencies are required for usage. See below for development dependencies.
 
 To use this module, add the following configuration block to the modules array in the `config/config.js` file:
 ```js
-var config = {
-    modules: [
-        {
-            module: 'MMM-Movie-Night',
-            config: {
-                // See below for configurable options
-                // Can be empty
-            }
-        }
-    ]
+{
+  module: 'MMM-MovieNite',
+  config: {
+    // See below for configurable options
+    // Can be empty
+  }
 }
 ```
 
@@ -37,6 +34,26 @@ var config = {
 | Option           | Required?  | Description                                                            |
 | ---------------- | ---------- | ---------------------------------------------------------------------- |
 | `updateInterval` | *Optional* | Refresh time in milliseconds <br>Default 3600000 milliseconds (1 hour) |
+
+## Update
+
+### Automatic Update
+
+Did you know MagicMirror² has a built-in module updater? Read more about it [here](https://docs.magicmirror.builders/modules/updatenotification.html#updates-array).
+
+Add the following to your `updates` array of `updatenotification` in `config/config.js`
+
+```js
+{ 'MMM-MovieNite': 'git pull' },
+```
+
+### Manual Update
+
+In `~/MagicMirror/modules/MMM-MovieNite`
+
+```sh
+git pull
+```
 
 
 ## Development

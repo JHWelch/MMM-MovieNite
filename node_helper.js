@@ -1,5 +1,5 @@
 /* Magic Mirror
- * Node Helper: MMM-Movie-Night
+ * Node Helper: MMM-MovieNite
  *
  * By Jordan Welch
  * MIT Licensed.
@@ -10,7 +10,7 @@ const NodeHelper = require('node_helper');
 
 module.exports = NodeHelper.create({
   socketNotificationReceived (notification, _payload) {
-    if (notification !== 'MMM-Movie-Night-FETCH') {
+    if (notification !== 'MMM-MovieNite-FETCH') {
       return;
     }
 
@@ -25,7 +25,7 @@ module.exports = NodeHelper.create({
 
     const events = await response.json();
 
-    this.sendSocketNotification('MMM-Movie-Night-DATA', { event: events[0] });
+    this.sendSocketNotification('MMM-MovieNite-DATA', { event: events[0] });
   },
 
   requestInit () {
