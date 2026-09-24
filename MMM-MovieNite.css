@@ -2,14 +2,14 @@
   max-width: 33.33vw;
 }
 
-.MMM-MovieNite > h1 {
+.MMM-MovieNite h1 {
   margin-block-start: 0em;
   margin-block-end: 0em;
   margin-inline-start: 0px;
   margin-inline-end: 0px;
 }
 
-.MMM-MovieNite > p {
+.MMM-MovieNite p {
   margin-block-start: 0em;
   margin-block-end: 0em;
   margin-inline-start: 0px;
@@ -22,11 +22,11 @@
   flex-wrap: nowrap;
 }
 
-.MMM-MovieNite .movies:first-child {
+.MMM-MovieNite .movie:first-child {
   margin-right: 10px;
 }
 
-.MMM-MovieNite .movies:last-child {
+.MMM-MovieNite .movie:last-child {
   margin-left: 10px;
 }
 
