@@ -1,40 +1,40 @@
-.mmm-movie-night {
+.MMM-MovieNite {
   max-width: 33.33vw;
 }
 
-.mmm-movie-night > h1 {
+.MMM-MovieNite > h1 {
   margin-block-start: 0em;
   margin-block-end: 0em;
   margin-inline-start: 0px;
   margin-inline-end: 0px;
 }
 
-.mmm-movie-night > p {
+.MMM-MovieNite > p {
   margin-block-start: 0em;
   margin-block-end: 0em;
   margin-inline-start: 0px;
   margin-inline-end: 0px;
 }
 
-.mmm-movie-night-movies {
+.MMM-MovieNite .movies {
   display: flex;
   justify-content: center;
   flex-wrap: nowrap;
 }
 
-.mmm-movie-night-movies:first-child {
+.MMM-MovieNite .movies:first-child {
   margin-right: 10px;
 }
 
-.mmm-movie-night-movies:last-child {
+.MMM-MovieNite .movies:last-child {
   margin-left: 10px;
 }
 
-.mmm-movie-night-movie-poster {
+.MMM-MovieNite .movie-poster {
   max-width: 200px;
 }
 
-.mmm-movie-night-movie {
+.MMM-MovieNite .movie {
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -43,7 +43,7 @@
   text-align: center;
 }
 
-.mmm-movie-night-movie img {
+.MMM-MovieNite .movie img {
   max-width: 100%;
   height: auto;
 }

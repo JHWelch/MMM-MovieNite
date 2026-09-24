@@ -1,13 +1,13 @@
 /* global Module */
 
 /* Magic Mirror
- * Module: MMM-Movie-Night
+ * Module: MMM-MovieNite
  *
  * By Jordan Welch
  * MIT Licensed.
  */
 
-Module.register('MMM-Movie-Night', {
+Module.register('MMM-MovieNite', {
   defaults: {
     updateInterval: 3600000,
   },
@@ -28,11 +28,11 @@ Module.register('MMM-Movie-Night', {
   },
 
   getData () {
-    this.sendSocketNotification('MMM-Movie-Night-FETCH');
+    this.sendSocketNotification('MMM-MovieNite-FETCH');
   },
 
   getTemplate () {
-    return 'templates/MMM-Movie-Night.njk';
+    return 'templates/MMM-MovieNite.njk';
   },
 
   getTemplateData () {
@@ -49,7 +49,7 @@ Module.register('MMM-Movie-Night', {
   getStyles () {
     return [
       'font-awesome.css',
-      'MMM-Movie-Night.css',
+      'MMM-MovieNite.css',
     ];
   },
 
@@ -61,7 +61,7 @@ Module.register('MMM-Movie-Night', {
   },
 
   socketNotificationReceived (notification, payload) {
-    if (notification !== 'MMM-Movie-Night-DATA') {
+    if (notification !== 'MMM-MovieNite-DATA') {
       return;
     }
 

@@ -1,18 +1,18 @@
 const event = require('./fixtures/event');
 
-describe('MMM-Movie-Night', () => {
+describe('MMM-MovieNite', () => {
   beforeAll(() => {
     require('../__mocks__/Module');
     require('../__mocks__/globalLogger');
   });
 
-  const name = 'MMM-Movie-Night';
+  const name = 'MMM-MovieNite';
 
   let MMMMovieNight;
 
   beforeEach(() => {
     jest.resetModules();
-    require('../MMM-Movie-Night');
+    require('../MMM-MovieNite');
 
     MMMMovieNight = global.Module.create(name);
     MMMMovieNight.setData({ name, identifier: `Module_1_${name}` });
@@ -48,14 +48,14 @@ describe('MMM-Movie-Night', () => {
     test('logs start of module', () => {
       MMMMovieNight.start();
 
-      expect(global.Log.info).toHaveBeenCalledWith('Starting module: MMM-Movie-Night');
+      expect(global.Log.info).toHaveBeenCalledWith('Starting module: MMM-MovieNite');
     });
 
     test('requests data from node_helper with config variables', () => {
       MMMMovieNight.start();
 
       expect(MMMMovieNight.sendSocketNotification)
-        .toHaveBeenCalledWith('MMM-Movie-Night-FETCH');
+        .toHaveBeenCalledWith('MMM-MovieNite-FETCH');
     });
 
     test('interval requests data from node_helper', () => {
@@ -64,7 +64,7 @@ describe('MMM-Movie-Night', () => {
 
       expect(MMMMovieNight.sendSocketNotification).toHaveBeenCalledTimes(2);
       expect(MMMMovieNight.sendSocketNotification)
-        .toHaveBeenCalledWith('MMM-Movie-Night-FETCH');
+        .toHaveBeenCalledWith('MMM-MovieNite-FETCH');
     });
 
     test('interval set starts with default value', () => {
@@ -78,7 +78,7 @@ describe('MMM-Movie-Night', () => {
 
   describe('getTemplate', () => {
     it('returns template path', () => {
-      expect(MMMMovieNight.getTemplate()).toBe('templates/MMM-Movie-Night.njk');
+      expect(MMMMovieNight.getTemplate()).toBe('templates/MMM-MovieNite.njk');
     });
   });
 
@@ -107,36 +107,36 @@ describe('MMM-Movie-Night', () => {
       it('returns styles path', () => {
         expect(MMMMovieNight.getStyles()).toEqual([
           'font-awesome.css',
-          'MMM-Movie-Night.css',
+          'MMM-MovieNite.css',
         ]);
       });
     });
   });
 
   describe('socketNotificationReceived', () => {
-    describe('notification is MMM-Movie-Night-DATA', () => {
+    describe('notification is MMM-MovieNite-DATA', () => {
       it('sets loading to false', () => {
-        MMMMovieNight.socketNotificationReceived('MMM-Movie-Night-DATA', {event});
+        MMMMovieNight.socketNotificationReceived('MMM-MovieNite-DATA', {event});
 
         expect(MMMMovieNight.loading).toBe(false);
       });
 
       it('updates dom', () => {
-        MMMMovieNight.socketNotificationReceived('MMM-Movie-Night-DATA', {event});
+        MMMMovieNight.socketNotificationReceived('MMM-MovieNite-DATA', {event});
 
         expect(MMMMovieNight.updateDom).toHaveBeenCalled();
       });
 
       it('sets data', () => {
-        MMMMovieNight.socketNotificationReceived('MMM-Movie-Night-DATA', {event});
+        MMMMovieNight.socketNotificationReceived('MMM-MovieNite-DATA', {event});
 
         expect(MMMMovieNight.data.event).toEqual(event);
       });
     });
 
-    describe('notification is not MMM-Movie-Night-DATA', () => {
+    describe('notification is not MMM-MovieNite-DATA', () => {
       it('does not set data', () => {
-        MMMMovieNight.socketNotificationReceived('NOT-MMM-Movie-Night-DATA', {event});
+        MMMMovieNight.socketNotificationReceived('NOT-MMM-MovieNite-DATA', {event});
 
         expect(MMMMovieNight.data.event).toEqual(undefined);
       });
