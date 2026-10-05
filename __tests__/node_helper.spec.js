@@ -17,7 +17,7 @@ describe('node_helper', () => {
   describe('socketNotificationReceived', () => {
     describe('called with proper MMM-MovieNite-FETCH', () => {
       beforeEach(() => {
-        fetchMock.mock('https://movies.wowellworld.com/api/events?limit=1&posterWidth=w185', {
+        fetchMock.mock('https://movienite.club/api/events?limit=1&posterWidth=w185', {
           status: 200,
           body: JSON.stringify([event]),
         });
@@ -31,7 +31,7 @@ describe('node_helper', () => {
         helper.socketNotificationReceived('MMM-MovieNite-FETCH');
 
         expect(fetchMock.calls(true)[0][0])
-          .toBe('https://movies.wowellworld.com/api/events?limit=1&posterWidth=w185');
+          .toBe('https://movienite.club/api/events?limit=1&posterWidth=w185');
       });
 
       it('calls frontend with movie', async () => {

@@ -2,7 +2,7 @@
 
 This is a module for the [MagicMirror²](https://github.com/MichMich/MagicMirror/).
 
-It shows the movies for the upcoming movie night from [movies.wowellworld.com](https://movies.wowellworld.com/). ([:octocat: Repo](https://github.com/JHWelch/movies.wowellworld.com))
+It shows the movies for the upcoming movie night from [movienite.club](https://movienite.club/). ([:octocat: Repo](https://github.com/JHWelch/movienite.club))
 
 ![Screenshot of the application in use.](/images/screenshot.png?raw=true "Screenshot")
 
